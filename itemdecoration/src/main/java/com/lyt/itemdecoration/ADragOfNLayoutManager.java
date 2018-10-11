@@ -1,4 +1,4 @@
-package com.lyt.itemdec;
+package com.lyt.itemdecoration;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
