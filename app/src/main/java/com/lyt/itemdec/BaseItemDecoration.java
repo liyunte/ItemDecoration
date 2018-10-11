@@ -1,4 +1,4 @@
-package com.lyt;
+package com.lyt.itemdec;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -9,16 +9,20 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.DisplayMetrics;
 
 
-
+/**
+ * Recyclerivew itemDecoration
+ * 包含GridLayoutManager、LinearLayoutManager、StaggeredGridLayoutManager
+ * 注意StaggeredGridLayoutManager
+ */
 public class BaseItemDecoration extends RecyclerView.ItemDecoration {
-    private int leftMargin;
+    private int leftMargin;//item与recyclerview的左边界距离
     private int rightMargin;
     private int topMargin;
     private int bottomMargin;
-    private int itemMargin;
+    private int itemMargin;//item之间的间距
     private int designWidth = 750;//UI设计图上屏幕宽度
-    private int headCount;
-    private int footCount;
+    private int headCount;//headerView数量
+    private int footCount;//footerView数量
     public BaseItemDecoration(Context context,int itemMargin) {
         this(context,750,itemMargin);
     }

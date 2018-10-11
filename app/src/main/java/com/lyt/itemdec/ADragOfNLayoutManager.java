@@ -1,4 +1,4 @@
-package com.lyt;
+package com.lyt.itemdec;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,30 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ========================================
- * <p/>
- * 版 权：江苏精易达信息技术股份有限公司 版权所有 （C） 2018
- * <p/>
- * 作 者：liyunte
- * <p/>
- * <p/>
- * 版 本：1.0
- * <p/>
- * 创建日期： 2018/10/10 11:19
  * <p/>
  * 描 述：1拖N布局
- * <p/>
- * <p/>
- * 修订历史：
  * <p/>
  * ========================================
  */
 
 public class ADragOfNLayoutManager extends GridLayoutManager {
     private List<SpanSizeBean> spanSizeBeanList = new ArrayList<>();
-    private boolean hasFooter;
-    private boolean hasHeader;
-    private int spanCount;
+    private boolean hasFooter;//是否有底部
+    private boolean hasHeader;//是否有头部
+    private int spanCount;//列数
     public ADragOfNLayoutManager(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes,boolean hasHeader,boolean hasFooter) {
         super(context, attrs, defStyleAttr, defStyleRes);
         this.hasFooter = hasFooter;
